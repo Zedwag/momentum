@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    color: #FFF;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    transition: background-image 1s ease-in-out;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    font-size: 2rem;
+    min-width: 5rem;
+}
+
+.left-arrow__wrapper, .right-arrow__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    background-color:rgba(0,0,0,.3);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.left-arrow__wrapper:hover, .right-arrow__wrapper:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.left-arrow, .right-arrow {
+    color: #FFF;
+    font-size: 3rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.content {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+
+.weather {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.weather__parameters {
+    font-size: 2rem;
+}
+
+.weather__location {
+    cursor: pointer;
+}
+
+.weather img {
+    width: 2.5rem;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 50%;
+    vertical-align: center;
+}
+
+.greetingAndFocusWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting, .focus {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+.greeting__text {
+    font-size: 2rem;
+}
+
+.focus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.focus__text {
+    font-size: 2rem;
+}
+
+.time {
+    font-size: 6rem;
+}
+
+.date {
+    font-size: 1.5rem;
+}
+
+.joke {
+    color: #111111;
+    padding: 1rem;
+    background: rgba(178, 178, 203, 0.7);
+    border-radius: 1rem ;
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.joke__header {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+}
+
+.joke__refresh {
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.joke__content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    flex-wrap: nowrap;
+}
+
+.joke__text {
+    font-size: 1rem;
+}
+
+.joke__bigText {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 1600px) {
+    input {
+        font-size: 4rem;
+    }
+
+    .greeting, .focus {
+        gap: 4rem;
+    }
+
+    .weather {
+        column-gap: 2rem;
+    }
+
+    .weather__parameters {
+        font-size: 4rem;
+    }
+
+    .weather img {
+        width: 5rem;
+    }
+
+    .left-arrow, .right-arrow {
+        font-size: 5rem;
+    }
+
+    .time {
+        font-size: 12rem;
+    }
+
+    .date {
+        font-size: 3rem;
+    }
+
+    .greeting__text {
+        font-size: 4rem;
+    }
+
+    .focus__text {
+        font-size: 4rem;
+    }
+
+    .joke__header-text {
+        font-size: 4rem;
+    }
+
+    .joke__refresh {
+        width: 3rem;
+    }
+
+    .joke__text {
+        font-size: 2rem;
+    }
+
+    .joke__bigText {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 700px) {
+    input {
+        font-size: 0.8rem;
+    }
+
+    .greeting, .focus {
+        gap: 1.2rem;
+    }
+
+    .weather {
+        column-gap: 1.2rem;
+    }
+
+    .weather__parameters {
+        font-size: 1.2rem;
+    }
+
+    .weather img {
+        width: 1.5rem;
+    }
+
+    .greeting, .focus {
+        gap: 1rem;
+    }
+
+    .left-arrow, .right-arrow {
+        font-size: 2rem;
+    }
+
+    .time {
+        font-size: 4rem;
+    }
+
+    .date {
+        font-size: 0.9rem;
+    }
+
+    .greeting__text {
+        font-size: 1.2rem;
+    }
+
+    .focus__text {
+        font-size: 1.2rem;
+    }
+
+    .joke__header-text {
+        font-size: 1.2rem;
+    }
+
+    .joke__refresh {
+        width: 0.9rem;
+    }
+
+    .joke__text {
+        font-size: 0.6rem;
+    }
+
+    .joke__bigText {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 500px) {
+    input {
+        font-size: 0.8rem;
+    }
+
+    .greeting, .focus {
+        gap: 0.8rem;
+    }
+
+    .weather {
+        column-gap: 0.4rem;
+    }
+
+    .weather__parameters {
+        font-size: 0.8rem;
+    }
+
+    .weather img {
+        width: 1rem;
+    }
+
+    .greeting, .focus {
+        gap: 0.5rem;
+    }
+
+    .left-arrow, .right-arrow {
+        font-size: 1.33rem;
+    }
+
+    .time {
+        font-size: 2.66rem;
+    }
+
+    .date {
+        font-size: 0.6rem;
+    }
+
+    .greeting__text {
+        font-size: 0.8rem;
+    }
+
+    .focus__text {
+        font-size: 0.8rem;
+    }
+
+    .joke__header-text {
+        font-size: 0.8rem;
+    }
+
+    .joke__refresh {
+        width: 0.6rem;
+    }
+
+    .joke__text {
+        font-size: 0.4rem;
+    }
+
+    .joke__bigText {
+        font-size: 0.6rem;
+    }
+}
